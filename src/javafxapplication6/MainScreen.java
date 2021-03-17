@@ -9,6 +9,8 @@ import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.util.Scanner;
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckMenuItem;
 import javafx.scene.control.ComboBox;
@@ -92,13 +94,15 @@ public class MainScreen extends Stage{
         
         
         pages =new ComboBox<>();
-        pages.getItems().addAll("Java FX", "GitHub Profile");
+        pages.getItems().addAll("Java FX", "github Repository", "GitHub Profile");
         pages.getSelectionModel().selectFirst();
         pages.setOnAction(e ->{
             if(pages.getSelectionModel().getSelectedItem().equals("Java FX")){
                 webView.getEngine().load("https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html");
             }else if(pages.getSelectionModel().getSelectedItem().equals("GitHub Profile")){
                 webView.getEngine().load("https://github.com/taher-qwaider");
+            }else if(pages.getSelectionModel().getSelectedItem().equals("github Repository")){
+                webView.getEngine().load("https://github.com/taher-qwaider/AssigenmentLc11");
             }
         });
         
@@ -144,23 +148,35 @@ public class MainScreen extends Stage{
             this.close();
         });
         
-        goldItem.setOnAction(e->{
-            textArea.setStyle("-fx-text-fill:gold");
-        });
-        cyanItem.setOnAction(e->{
-            textArea.setStyle("-fx-text-fill:cyan");
-        });
-        redItem.setOnAction(e->{
-            textArea.setStyle("-fx-text-fill:red");
-        });
+        colorAction colorAction =new colorAction();
+        goldItem.setOnAction(colorAction);
+        cyanItem.setOnAction(colorAction);
+        redItem.setOnAction(colorAction);
+        
+        
         aboutItem.setOnAction(e-> {
             new ProfileStage().show();
         });
+        
         Scene scene =new Scene(borderPane, 1000, 600);
         setScene(scene);
         setTitle("Text Editor");
         
     }
+    class colorAction implements EventHandler<ActionEvent>{
+
+    @Override
+    public void handle(ActionEvent event) {
+       RadioMenuItem source= (RadioMenuItem)(event.getSource());
+        if(source.getText().equals("Gold")){
+            textArea.setStyle("-fx-text-fill:gold;-fx-font-size:"+slider.getValue()+"pt");
+        }else if(source.getText().equals("Cyan")){
+            textArea.setStyle("-fx-text-fill:cyan;-fx-font-size:"+slider.getValue()+"pt");
+        }else if(source.getText().equals("Red")){
+            textArea.setStyle("-fx-text-fill:red;-fx-font-size:"+slider.getValue()+"pt");
+        }
+    }
     
+}
     
 }
