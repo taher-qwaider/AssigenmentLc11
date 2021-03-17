@@ -1,0 +1,12 @@
+.root{
+     -fx-background-color: aquamarine;
+     -fx-text-fill : #33ffff;
+     -fx-font-weight: bold; 
+}
+.label{
+     -fx-font-family: cursive;
+     -fx-font-size: 14pt;
+    -fx-font-style: italic;
+    -fx-background-color: white;
+    /*-fx-border-style: solid;*/
+}

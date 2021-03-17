@@ -1,0 +1,36 @@
+
+
+.root{
+     -fx-background-color: aquamarine;
+     -fx-text-fill : #33ffff;
+     -fx-font-weight: bold; 
+}
+.label{
+     -fx-font-family: cursive;
+     -fx-font-size: 14pt;
+    -fx-font-style: italic;
+    -fx-border-style: dotted;
+
+}
+.message-true{
+    -fx-font-family: cursive;
+     -fx-font-size: 14pt;
+    -fx-font-style: italic;
+    -fx-border-style: dotted;
+    -fx-text-fill: green;
+}
+.message-false{
+    -fx-font-family: cursive;
+     -fx-font-size: 14pt;
+    -fx-font-style: italic;
+    -fx-border-style: dotted;
+    -fx-text-fill: red;
+}
+.button-submit{
+    -fx-text-fill : black;
+    -fx-background-color : green;
+}
+.button-cancle{
+    -fx-text-fill : black;
+    -fx-background-color : red;
+}
