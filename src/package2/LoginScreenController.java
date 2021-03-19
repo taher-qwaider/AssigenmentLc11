@@ -35,6 +35,7 @@ public class LoginScreenController implements Initializable {
 
     @FXML
     private void submitAction(ActionEvent event) {
+        new MainScreenClass().show();
     }
 
     @FXML

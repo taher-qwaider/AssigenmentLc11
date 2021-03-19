@@ -19,9 +19,10 @@ public class MainApp extends Application{
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader=new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
+        System.out.println(getClass().getResource("loginScreen.fxml"));
+        FXMLLoader loader=new FXMLLoader(MainApp.class.getResource("loginScreen.fxml"));
         FlowPane parent=loader.load();
-        
+        //getClass().getResource("MainScreen.fxml")
         Scene scene=new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main App");
