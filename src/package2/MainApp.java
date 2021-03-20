@@ -7,6 +7,7 @@ package package2;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
@@ -20,9 +21,8 @@ public class MainApp extends Application{
     @Override
     public void start(Stage primaryStage) throws Exception {
         System.out.println(getClass().getResource("loginScreen.fxml"));
-        FXMLLoader loader=new FXMLLoader(MainApp.class.getResource("loginScreen.fxml"));
-        FlowPane parent=loader.load();
-        //getClass().getResource("MainScreen.fxml")
+        FXMLLoader loader=new FXMLLoader(getClass().getResource("loginScreen.fxml"));
+        Parent parent=loader.load();
         Scene scene=new Scene(parent);
         primaryStage.setScene(scene);
         primaryStage.setTitle("Main App");

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: aquamarine;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: solid;">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="71.0" style="-fx-background-color: white;" text="Name :" textFill="#027215" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="166.0" style="-fx-background-color: white;" text="Taher Qwaider" textFill="#027215" textOverrun="CLIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: solid;">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="62.0" style="-fx-background-color: white;" text="ID :" textFill="#027215" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="160.0" style="-fx-background-color: white;" text="120190804" textFill="#027215" textOverrun="CLIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: solid;">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="89.0" style="-fx-background-color: white;" text="Specialty :" textFill="#027215" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: white;" text="Software Development" textFill="#027215" textOverrun="CLIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: solid;">
+         <children>
+            <Label alignment="CENTER" prefHeight="51.0" prefWidth="89.0" style="-fx-background-color: white;" text="Course :" textFill="#027215" underline="true">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="196.0" style="-fx-background-color: white;" text="Programming 3" textFill="#027215" textOverrun="CLIP">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>

@@ -8,15 +8,15 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="package2.MainScreenController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="403.0" prefWidth="661.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="package2.MainScreenController">
    <top>
       <MenuBar BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
-              <MenuItem fx:id="open" mnemonicParsing="false" onAction="#OpenAction" text="Open" />
-                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#CloseAction" text="Close" />
-                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#SaveAction" text="Save" />
+              <MenuItem fx:id="open" mnemonicParsing="false" onAction="#OpenAction" text="Open File" />
+                  <MenuItem fx:id="close" mnemonicParsing="false" onAction="#CloseAction" text="Close File" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#SaveAction" text="Save File" />
                   <MenuItem fx:id="exit" mnemonicParsing="false" onAction="#ExitAction" text="Exit" />
             </items>
           </Menu>
@@ -54,10 +54,10 @@
       </VBox>
    </center>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox alignment="TOP_CENTER" prefHeight="100.0" prefWidth="150.0" BorderPane.alignment="TOP_CENTER">
          <children>
             <ComboBox fx:id="pages" onAction="#comboAction" prefWidth="150.0" promptText="Chooze a web page" translateY="30.0" />
-            <WebView fx:id="webView" prefHeight="100.0" prefWidth="453.0" />
+            <WebView fx:id="webView" maxHeight="-Infinity" maxWidth="-1.0" minHeight="250.0" minWidth="500.0" prefHeight="500.0" prefWidth="600.0" />
          </children>
       </HBox>
    </bottom>

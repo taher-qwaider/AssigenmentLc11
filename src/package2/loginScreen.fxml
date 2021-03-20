@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-font-size: 15pt; -fx-background-color: #FF1DBF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="packagepart3.LoginScreenController">
+<FlowPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-font-size: 15pt; -fx-background-color: #FF1DBF;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="package2.LoginScreenController">
    <children>
       <VBox prefHeight="373.0" prefWidth="373.0">
          <children>
@@ -16,17 +16,17 @@
                   <Label alignment="CENTER" prefHeight="39.0" prefWidth="248.0" style="-fx-text-fill: #004E00; -fx-font-size: 20pt;" text="Login Information" textAlignment="CENTER" />
                   <TextField fx:id="userName" />
                   <PasswordField fx:id="password" />
-                  <Label alignment="CENTER" prefHeight="39.0" prefWidth="150.0" style="-fx-font-size: 20pt; -fx-text-fill: #004E00;" text="Intial Text" />
+                  <Label fx:id="messageLabel" alignment="CENTER" prefHeight="39.0" prefWidth="150.0" style="-fx-font-size: 20pt; -fx-text-fill: #004E00;" text="Intial Text" />
                </children>
             </VBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="22.0">
                <children>
-                  <Button mnemonicParsing="false" onAction="#submitAction" style="-fx-background-color: #14AF0D;" text="Submit">
+                  <Button fx:id="submit" mnemonicParsing="false" onAction="#submitAction" style="-fx-background-color: #14AF0D;" text="Submit">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#cancelAction" style="-fx-background-color: #EA0408;" text="Cancel">
+                  <Button fx:id="cancle" mnemonicParsing="false" onAction="#cancelAction" style="-fx-background-color: #EA0408;" text="Cancel">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>

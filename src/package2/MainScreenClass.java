@@ -18,14 +18,10 @@ import javafx.stage.Stage;
  */
 public class MainScreenClass extends Stage{
 
-    public MainScreenClass(){
+    public MainScreenClass() throws IOException{
+        System.out.println(getClass().getResource("MainScreen.fxml"));
         FXMLLoader loader=new FXMLLoader(getClass().getResource("MainScreen.fxml"));
-        BorderPane parent=null;
-        try {
-            parent=loader.load();
-        } catch (IOException e) {
-            System.err.println(e.getMessage());
-        }
+        BorderPane parent=loader.load();
         
         Scene scene=new Scene(parent, 1000, 600);
         

@@ -19,6 +19,7 @@ import javafx.scene.control.MenuItem;
 import javafx.scene.control.RadioMenuItem;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextArea;
+import javafx.scene.control.ToggleGroup;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.web.WebView;
 import javafx.stage.FileChooser;
@@ -64,6 +65,13 @@ public class MainScreenController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         pages.getItems().addAll("JavaFX", "GitHub Repository", "GitHub Profile");
+        slider.valueProperty().addListener(e-> {
+            textArea.setStyle("-fx-font-size:" + slider.getValue() +"pt");
+        });
+        ToggleGroup radioItems=new ToggleGroup();
+        red.setToggleGroup(radioItems);
+        cyan.setToggleGroup(radioItems);
+        gold.setToggleGroup(radioItems);
     }    
 
     @FXML
@@ -108,7 +116,9 @@ public class MainScreenController implements Initializable {
     }
 
     @FXML
-    private void AboutAction(ActionEvent event) {
+    private void AboutAction(ActionEvent event) throws Exception {
+        
+        new ProfileStage().show();
     }
 
     @FXML
@@ -117,25 +127,28 @@ public class MainScreenController implements Initializable {
             webView.getEngine().load("https://docs.oracle.com/javase/8/javafx/api/javafx/scene/doc-files/cssref.html");
         }else if(pages.getSelectionModel().getSelectedItem().equals("GitHub Profile")){
             webView.getEngine().load("https://github.com/taher-qwaider");
-        }else if(pages.getSelectionModel().getSelectedItem().equals("github Repository")){
+        }else if(pages.getSelectionModel().getSelectedItem().equals("GitHub Repository")){
             webView.getEngine().load("https://github.com/taher-qwaider/AssigenmentLc11");
         }
     }
 
     @FXML
-    private void sliderAction(MouseEvent event) {
-    }
-
-    @FXML
     private void redColorAction(ActionEvent event) {
+        textArea.setStyle("-fx-text-fill:red;-fx-font-size:"+slider.getValue()+"pt");
     }
 
     @FXML
     private void cyanColorAction(ActionEvent event) {
+        textArea.setStyle("-fx-text-fill:cyan;-fx-font-size:"+slider.getValue()+"pt");
     }
 
     @FXML
     private void goldColorAction(ActionEvent event) {
+        textArea.setStyle("-fx-text-fill:gold;-fx-font-size:"+slider.getValue()+"pt");
+    }
+
+    @FXML
+    private void sliderAction(MouseEvent event) {
     }
     
 }
